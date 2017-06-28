@@ -15,7 +15,7 @@ def load_data(filepath):
 def get_bars_json(url_destination):
     # url = 'https://op.mos.ru/EHDWSREST/catalog/export/get?id=84505'
     session = requests.Session()
-    session.proxies.update({'http': 'xz.avp.ru:8080', 'https': 'xz.avp.ru:8080', })
+    #session.proxies.update({'http': 'xz.xz.ru:8080', 'https': 'xz.xz.ru:8080', })
     session_result = session.get(url_destination)
     if os.path.isfile('temp_arch'):
         os.remove('temp_arch')

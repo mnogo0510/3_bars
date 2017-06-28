@@ -78,21 +78,13 @@ def get_closest_bar(p_obj, longitude, latitude):
 
 if __name__ == '__main__':
 
-    # p = load_data('sample.json')
-    # print( p[0]['geoData']['coordinates'][0]*p[0]['geoData']['coordinates'][0])
+    lat = 56
+    long = 38.1
 
     my_list_biggest =  get_biggest_bar(load_data('sample.json'))
     my_list_smallest = get_smallest_bar(load_data('sample.json'))
-    my_list_nearest = get_closest_bar(load_data('sample.json'), 56, 38)
-
-    #print('The biggest bar. ID: %s; seats: %d; address: %s' % (id, max, address))
-
+    my_list_nearest = get_closest_bar(load_data('sample.json'), lat, long)
 
     print ('Biggest: ', my_list_biggest)
     print ('Smallest: ', my_list_smallest)
     print ('Nearest: ', my_list_nearest)
-
-    # for i in my_list:
-    #     for key in i:
-    #         print(key, i[key])
-        #print('The biggest bar. ID: %s; seats: %d; address: %s' % (key, my_list[key].[0], address))
